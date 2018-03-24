@@ -1,0 +1,42 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content class="loginPage">
+ <div class="white-bg">
+ 	<div class="white-padding">
+
+ 		<!-- <ion-item no-lines no-padding>
+ 			<ion-row>
+	 			<ion-icon style="font-size: 20px;" name="arrow-round-back" item-start></ion-icon>
+	 		</ion-row>
+       </ion-item> -->
+
+       <ion-item>
+         <ion-label floating>NAME</ion-label>
+         <ion-input [(ngModel)]="name" type="text" required></ion-input>
+       </ion-item>
+
+        <ion-item>
+         <ion-label floating>MOBILE NUMBER</ion-label>
+         <ion-input [(ngModel)]="phone_number" type="text" required></ion-input>
+       </ion-item>
+
+        <ion-item>
+         <ion-label floating>PASSWORD</ion-label>
+         <ion-input [(ngModel)]="password" type="password" required></ion-input>
+       </ion-item>
+       
+       <ion-item>
+         <ion-label floating>EMAIL</ion-label>
+         <ion-input [(ngModel)]="email" type="email" required></ion-input>
+       </ion-item>
+         
+	   	<button ion-button full round color="main" class="uppercase" style="margin-top: 30px" (click)="signIn()">Sign Up</button>
+ 	</div>   
+   </div>
+ </ion-content>

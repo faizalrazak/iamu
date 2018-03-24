@@ -1,0 +1,30 @@
+<ion-content class="loginPage">
+ <div class="white-bg">
+ 	<div class="white-padding">
+	 	<ion-item no-lines>
+	        <img src="assets/imgs/logo.png">
+	    </ion-item>
+	       <ion-item>
+	         <ion-label floating>EMAIL OR NUMBER PHONE</ion-label>
+	         <ion-input [(ngModel)]="email" type="email" required></ion-input>
+	       </ion-item>
+	       
+	       <ion-item>
+	         <ion-label floating>PASSWORD</ion-label>
+	         <ion-input [(ngModel)]="password" type="password" required></ion-input>
+	       </ion-item>
+        <div style="padding-top: 10px">
+	   	<button ion-button round color="main" class="uppercase" (click)="signIn()">Login</button>
+        </div> 
+	    <p text-center (click)="forgotPassword()">Forgot password?</p>
+	    <div style="padding-top: 10px">
+	    	<button ion-button round class="uppercase" style="background: #2F80ED" (click)="signIn()">Login with Facebook</button>
+	    </div>
+	    <div style="padding-top: 10px">
+	    	 <button ion-button round class="uppercase" style="background: #2D9CDB" (click)="signUp()">Login with Instagram</button>
+	    </div>
+	    	   
+	    <p text-center (click)="signUp()">Create account</p>
+ 	</div>   
+   </div>
+ </ion-content>

@@ -1,0 +1,91 @@
+<ion-header>
+
+  <ion-navbar color="main">
+  	<ion-row>
+  		<ion-col col-1 class="middle">
+  			<ion-icon name="list" (click)="list()"></ion-icon>
+  		</ion-col>
+  		<ion-col col-9>
+	    	<ion-searchbar (input)="getItems($event)"></ion-searchbar>
+	    </ion-col>
+	    <ion-col col-1 class="middle">
+  			<ion-icon name="funnel"></ion-icon>
+  		</ion-col>
+  		<ion-col col-1 class="middle">
+  			<ion-icon name="contact" (click)="profile()"></ion-icon>
+  		</ion-col>
+	</ion-row>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+	<div padding>
+		<div style="margin-top: 30px" text-center>
+			<div text-center style="margin-bottom: 15px">
+				<img src="assets/imgs/cradle.png" style="max-height: 40px">
+			</div>
+			<strong >Technology Acquisition Fund</strong>
+		</div>
+		
+		<ion-item text-wrap no-padding text-justify no-lines>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+		</ion-item>
+
+		<ion-row>
+	    	<ion-badge style="background: #F2F2F2; color: black">pembiayaan</ion-badge>
+	    </ion-row>
+	</div>
+	<hr>
+	<div padding>
+		<p style="font-weight: bold; margin-top: 0px">Kelayakan dan syarat</p>
+
+		<p text-wrap text-justify>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<div class="info">
+			<p class="heading">HAD PEMBIAYAAN MINIMUM</p>
+			<p>RM 0</p>
+			<p class="heading">HAD PEMBIAYAAN MAKSIMUM</p>
+			<p>RM 0</p>
+			<p class="heading">LOKASI LATIHAN, PREMIS ATAU INFRASTRUKTUR</p>
+			<p>Bandar Baru Bangi, Kajang, 81200, Selangor</p>
+		</div>
+
+		<button ion-button full round color="main" style="text-transform: capitalize; width: 80%; margin: 0 auto;" (click)="signIn()">Link to program</button>
+	</div>
+
+	<hr>
+	<div padding>
+		<p class="heading">AGENSI</p>
+		<p>Malaysian Technology Development Corporation (MTDC)</p>
+		<p class="heading">ADDRESS</p>
+		<p>Bandar Baru Bangi, Kajang, 81200, Selangor</p>
+		<ion-row>
+			<ion-col col-6 no-padding>
+				<p class="heading">TELEPHONE</p>
+				<p>03 - 2297 7888</p>
+			</ion-col>
+			<ion-col col-6 no-padding>
+				<p class="heading">FAX</p>
+				<p>03 - 2297 7888</p>
+			</ion-col>
+		</ion-row>
+		<p class="heading">EMAIL</p>
+		<p>comms.mtdc.com.my</p>
+		<p class="heading">WEBSITE</p>
+		<p>http://www.mtdc.com.my</p>
+	</div>
+
+	
+	
+
+</ion-content>
