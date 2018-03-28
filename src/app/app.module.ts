@@ -4,6 +4,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { HttpModule } from '@angular/http'; 
+import { HttpClientModule } from '@angular/common/http'; 
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
@@ -12,6 +15,8 @@ import { MainPage } from '../pages/main/main';
 import { ProgramPage } from '../pages/program/program';
 import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
 import { ProfilePage } from '../pages/profile/profile';
+import { HomeFilterPage } from '../pages/home-filter/home-filter';
+import { DataProvider } from '../providers/data/data'; 
 
 
 @NgModule({
@@ -23,10 +28,13 @@ import { ProfilePage } from '../pages/profile/profile';
     MainPage,
     ProgramPage,
     ForgotPasswordPage,
-    ProfilePage
+    ProfilePage,
+    HomeFilterPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -38,12 +46,14 @@ import { ProfilePage } from '../pages/profile/profile';
     MainPage,
     ProgramPage,
     ProfilePage,
-    ForgotPasswordPage
+    ForgotPasswordPage,
+    HomeFilterPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataProvider
   ]
 })
 export class AppModule {}

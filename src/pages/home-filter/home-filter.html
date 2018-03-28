@@ -1,0 +1,31 @@
+<ion-content padding style="background-color:#FF9045">
+	<div>
+	<button style="margin:auto;display:block;max-width:100%" ion-button color="light" round outline>
+		<ion-select [(ngModel)]="sector">
+      		<ion-option *ngFor="let agency of dataInfo" [value]="agency.name" style="color:#FFFFFF">{{agency.name}}</ion-option>
+    </ion-select>
+	</button>
+	</div>
+	<div style="padding-top:10px">
+	<button style="margin:auto;display:block;max-width:100%" ion-button color="light" round outline>
+		<ion-select [(ngModel)]="program">
+      		<ion-option *ngFor="let agency of dataInfo" [value]="agency.nama_prog" style="color:#FFFFFF">{{agency.nama_prog}}</ion-option>
+    </ion-select>
+	</button>
+	</div>
+	<ion-item color="main" no-lines>
+      <ion-range dualKnobs="true" min="250000" max="1500000" pin="true" [(ngModel)]="structure1" color="dark">
+        <ion-label range-left>250,000</ion-label>
+        <ion-label range-right>1,500,000</ion-label>
+      </ion-range>
+    </ion-item>
+    <ion-item color="main" no-lines>
+      <ion-range dualKnobs="true" min="30000" max="500000" pin="true" [(ngModel)]="structure2" color="dark">
+        <ion-label range-left>30,000</ion-label>
+        <ion-label range-right>500,000</ion-label>
+      </ion-range>
+    </ion-item>
+    <div>
+      <button ion-button block item-end icon-left color="light" round outline (click)="getData()"><ion-icon name="star"></ion-icon>Show only relevant programs</button>
+    </div>
+</ion-content>

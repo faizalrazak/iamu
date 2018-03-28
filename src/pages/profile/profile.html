@@ -56,27 +56,123 @@
 		         <ion-label floating>EMAIL</ion-label>
 		         <ion-input [(ngModel)]="name" type="text" required></ion-input>
 		       </ion-item>
+
+		       <ion-item no-lines>
+		       	 <ion-label style="color: #828282">SOCIAL MEDIA LOGIN</ion-label>
+		       </ion-item>
+		       <ion-item no-lines>
+		       	<button ion-button round style="background: #828282"><ion-icon name="logo-facebook"></ion-icon></button>
+		       	<button ion-button round style="background: #E0E0E0"><div style="color: #828282">Diconnect Facebook</div></button>
+		       </ion-item>
+		       <ion-item no-lines>
+		       	<button ion-button round style="background: #828282"><ion-icon name="logo-instagram"></ion-icon></button>
+		       	<button ion-button round style="background: #E0E0E0"><div style="color: #828282">Connect Instagram</div></button>
+		       </ion-item>
+   				<div style="padding-top: 10px">
+					<button ion-button color="main" round style="margin:auto;display:block;">Save my profile</button>
+   				</div>
+   				<div style="padding-top: 10px">
+   					<button ion-button color="main" round style="background:#828282;margin:auto;display:block;">Log out</button>
+   				</div>
 			</ion-list>
 		</div>
 	 
 	<div *ngSwitchCase="'business'">
 			<ion-list padding>
 			   <ion-item>
-		         <ion-label floating>REGISTER NUMBER</ion-label>
-		         <ion-input [(ngModel)]="name" type="text" required></ion-input>
+		         <ion-label>REGISTER NUMBER</ion-label>
+		         <ion-input type="text" required></ion-input>
 		       </ion-item>
 		       <ion-item>
-		         <ion-label floating>CATEGORY</ion-label>
-		         <ion-input [(ngModel)]="name" type="text" required></ion-input>
+		         <ion-label>CATEGORY</ion-label>
+		         <ion-select [(ngModel)]="name">
+      				<ion-option value="fashsion" selected="true">Fashion LifeStyle</ion-option>
+    			 </ion-select>
 		       </ion-item>
 		       <ion-item>
-		         <ion-label floating>TYPE OF BUSINESS</ion-label>
-		         <ion-input [(ngModel)]="name" type="text" required></ion-input>
+		         <ion-label>TYPE OF BUSINESS</ion-label>
+		         <ion-select [(ngModel)]="name">
+      				<ion-option value="fashsion" selected="true">Partnership</ion-option>
+    			 </ion-select>
 		       </ion-item>
 		       <ion-item>
-		         <ion-label floating>INDUSTRY SIZE</ion-label>
-		         <ion-input [(ngModel)]="name" type="text" required></ion-input>
+		         <ion-label>INDUSTRY SIZE</ion-label>
+		         <ion-select [(ngModel)]="name">
+      				<ion-option value="fashsion" selected="true">IKS</ion-option>
+    			 </ion-select>
 		       </ion-item>
+		       <ion-item>
+		       	<ion-label>EMPLOYEE SIZE</ion-label>
+	       		<ion-select [(ngModel)]="name">
+      				<ion-option value="fashsion" selected="true">10-50</ion-option>
+      				<ion-option value="fashsion">51-100</ion-option>
+    			 </ion-select>
+		       </ion-item>
+		       <ion-item>
+		       	<ion-label>INCOPRATION DATE</ion-label>
+		       	<ion-select [(ngModel)]="month">
+			        <ion-option value="01">January</ion-option>
+			        <ion-option value="02">February</ion-option>
+			        <ion-option value="03">March</ion-option>
+			        <ion-option value="04">April</ion-option>
+			        <ion-option value="05">May</ion-option>
+			        <ion-option value="06">June</ion-option>
+			        <ion-option value="07">July</ion-option>
+			        <ion-option value="08">August</ion-option>
+			        <ion-option value="09">September</ion-option>
+			        <ion-option value="10">October</ion-option>
+			        <ion-option value="11">November</ion-option>
+			        <ion-option value="12" checked="true">December</ion-option>
+		      	</ion-select>
+		      	<ion-select [(ngModel)]="year">
+			        <ion-option>1989</ion-option>
+			        <ion-option>1990</ion-option>
+			        <ion-option>1991</ion-option>
+			        <ion-option>1992</ion-option>
+			        <ion-option>1993</ion-option>
+			        <ion-option checked="true">1994</ion-option>
+			        <ion-option>1995</ion-option>
+			        <ion-option>1996</ion-option>
+			        <ion-option>1997</ion-option>
+			        <ion-option>1998</ion-option>
+			        <ion-option>1999</ion-option>
+		      	</ion-select>
+	       	   </ion-item>
+		       <ion-item>
+		       	<ion-label>WEBSITE URL</ion-label>
+	       		<ion-input type="text" required></ion-input>
+		       </ion-item>
+		       <ion-item>
+		       	<ion-label>OFFICE ADDRESS</ion-label>
+		       	<ion-select [(ngModel)]="month">
+			        <ion-option value="01">CYBERJAYA</ion-option>
+		      	</ion-select>
+		      	<ion-select [(ngModel)]="year">
+			        <ion-option>sELANGOR</ion-option>
+		      	</ion-select>
+		       </ion-item>
+		       <ion-item no-lines style="padding-top: 10px">
+		       	 <ion-label style="color: #828282">SOCIAL MEDIA LOGIN</ion-label>
+		       </ion-item>
+		       <ion-item no-lines>
+		       	<button ion-button round style="background: #828282"><ion-icon name="logo-facebook"></ion-icon></button>
+		       	<button ion-button round style="background: #E0E0E0"><div style="color: #828282">Diconnect Facebook</div></button>
+		       </ion-item>
+		       <ion-item no-lines>
+		       	<button ion-button round style="background: #828282"><ion-icon name="logo-instagram"></ion-icon></button>
+		       	<button ion-button round style="background: #E0E0E0"><div style="color: #828282">Connect Instagram</div></button>
+		       </ion-item>
+		       <ion-item no-lines>
+		       	<button ion-button round style="background: #828282"><ion-icon name="logo-twitter"></ion-icon></button>
+		       	<button ion-button round style="background: #E0E0E0"><div style="color: #828282">Diconnect Twitter</div></button>
+		       </ion-item>
+		       <ion-item no-lines>
+		       	<button ion-button round style="background: #828282"><ion-icon name="logo-linkedin"></ion-icon></button>
+		       	<button ion-button round style="background: #E0E0E0"><div style="color: #828282">Connect Linkedin</div></button>
+		       </ion-item>
+   				<div style="padding-top: 10px">
+					<button ion-button color="main" round style="margin:auto;display:block;">Save Business Profile</button>
+   				</div>
 			</ion-list>
 		</div>
 	  

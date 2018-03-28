@@ -9,7 +9,7 @@
 	    	<ion-searchbar (input)="getItems($event)"></ion-searchbar>
 	    </ion-col>
 	    <ion-col col-1 class="middle">
-  			<ion-icon name="funnel"></ion-icon>
+  			<ion-icon name="funnel" (click)="getFilter()"></ion-icon>
   		</ion-col>
   		<ion-col col-1 class="middle">
   			<ion-icon name="contact" (click)="profile()"></ion-icon>
@@ -22,23 +22,14 @@
 
 <ion-content>
 	<ion-list>
-	  <ion-item (click)="detail()">
+	  <ion-item *ngFor="let agency of filterAgencies" (click)="detail(agency)">
 	    <ion-thumbnail item-end>
-	      <img src="assets/imgs/image.png">
+	      <img src="{{agency.img_url}}">
 	    </ion-thumbnail>
-	    <p>My Neighbor Totoro</p>
+	    <p>{{agency.name}}</p>
 	    <ion-row>
-	    	<ion-badge style="margin-top: 15px; background: #F2F2F2; color: black">pembiayaan</ion-badge>
+	    	<ion-badge style="margin-top: 15px; background: #F2F2F2; color: black">{{agency.cat_prog}}</ion-badge>
 	    </ion-row>	
-	  </ion-item>
-	  <ion-item>
-	    <ion-thumbnail item-end>
-	      <img src="assets/imgs/image.png">
-	    </ion-thumbnail>
-	    <p>Hayao Miyazaki • 1988</p>
-	    <ion-row>
-	    	<ion-badge style="margin-top: 15px; background: #F2F2F2; color: black">pembiayaan</ion-badge>
-	    </ion-row>
 	  </ion-item>
 	</ion-list>
 </ion-content>

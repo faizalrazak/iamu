@@ -17,11 +17,14 @@ import { ProfilePage } from '../profile/profile'
 })
 export class ProgramPage {
 
+  agencies = this.navParams.get('agency')
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProgramPage');
+    //console.log('ionViewDidLoad ProgramPage');
+    console.log(this.agencies);
   }
 
   list(){
