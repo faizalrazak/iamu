@@ -1,15 +1,15 @@
 <ion-content padding style="background-color:#FF9045">
 	<div>
 	<button style="margin:auto;display:block;max-width:100%" ion-button color="light" round outline>
-		<ion-select [(ngModel)]="sector">
-      		<ion-option *ngFor="let agency of dataInfo" [value]="agency.name" style="color:#FFFFFF">{{agency.name}}</ion-option>
+		<ion-select [(ngModel)]="selectedIndustry">
+      		<ion-option *ngFor="let industry of industries" [value]="industry" style="color:#FFFFFF">{{industry}}</ion-option>
     </ion-select>
 	</button>
 	</div>
 	<div style="padding-top:10px">
 	<button style="margin:auto;display:block;max-width:100%" ion-button color="light" round outline>
-		<ion-select [(ngModel)]="program">
-      		<ion-option *ngFor="let agency of dataInfo" [value]="agency.nama_prog" style="color:#FFFFFF">{{agency.nama_prog}}</ion-option>
+		<ion-select [(ngModel)]="selectedCat">
+      		<ion-option *ngFor="let cat of categories" [value]="cat" style="color:#FFFFFF">{{cat}}</ion-option>
     </ion-select>
 	</button>
 	</div>

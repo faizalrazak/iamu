@@ -18,10 +18,11 @@ export class HomeFilterPage {
 
 	structure1: any = { lower: 250000, upper: 1500000 };
 	structure2: any = { lower: 30000, upper: 500000 };
-	sector = '';
 	dataInfo = []
-  program = '';
-
+  categories = []
+  selectedIndustry = ""
+  selectedCat = ""
+  industries = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, public dataProvider: DataProvider) {
   
@@ -30,13 +31,15 @@ export class HomeFilterPage {
   ionViewDidLoad() {
     //console.log('ionViewDidLoad HomeFilterPage');
     this.dataInfo = this.dataProvider.getAllAgencies()
+    this.categories = this.dataProvider.getAllCategories();
+    this.industries = this.dataProvider.getAllIndustries();
   }
 
   getData(){
 
   	let data = {
-  		sector: this.sector,
-  		program: this.program,
+  		industry: this.selectedIndustry,
+      cat: this.selectedCat,
   		fund: this.structure1,
   		rent: this.structure2
   	}

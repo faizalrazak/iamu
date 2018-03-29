@@ -50,8 +50,7 @@ export class MainPage {
     modal.onDidDismiss(data => {
       console.log(data);
       this.filterAgencies = this.agencies.filter(function(el){
-        return el.name == data.sector && el.nama_prog == data.program;
-        //el.had_min >= data.fund.lower || el.had_max <= data.fund.upper ||
+        return el.cat_prog == data.cat && el.cat_indusri == data.industry;
       })
     });
     modal.present();
